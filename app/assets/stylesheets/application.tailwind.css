@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ダークモードのベーススタイル */
+@layer base {
+  body {
+    @apply bg-dark-900 text-gray-100;
+  }
+}
+
+/* プログレスバーのアニメーション */
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 15s linear;
+} 
