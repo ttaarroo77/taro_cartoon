@@ -2,23 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ダークモードのベーススタイル */
+/* カスタムスタイル */
 @layer base {
   body {
-    @apply bg-dark-900 text-gray-100;
+    @apply bg-blue-500 min-h-screen;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-white mb-4;
+  }
+
+  p {
+    @apply text-white text-lg;
   }
 }
 
-/* プログレスバーのアニメーション */
-@keyframes progress {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
+@layer components {
+  .container {
+    @apply max-w-4xl mx-auto px-4 py-8;
   }
 }
-
-.animate-progress {
-  animation: progress 15s linear;
-} 
